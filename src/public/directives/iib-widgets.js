@@ -14,10 +14,9 @@ Author John Hosie
 
 
 (function(){
-  angular.module('iibWidgets',[])
+  angular.module('iibWidgets',['iibAdminJs'])
     .factory('iibWidgetSpec',['iibWidgetRegistry',iibWidgetSpecFactory])
     .factory('d3Util',d3UtilFactory)
-    .provider('iibIntegrationBus',iibIntegrationBusProviderFunction)
     .directive('iibWidget',['$rootScope', 'd3Util','iibWidgetRegistry',iibWidgetDirective])
     .provider('iibWidgetRegistry',iibWidgetRegistry)
     ;
