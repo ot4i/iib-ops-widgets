@@ -1,0 +1,25 @@
+{
+  "name": "iib-widget-test",
+  "version": "0.0.0",
+  "authors": [
+    "hosie <jhosie@uk.ibm.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bower-mqttws": "~1.0.0",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.0",
+    "angular": "~1.4.2",
+    "d3": "~3.5.6",
+    "angular-route": "~1.4.2"
+  }
+}
