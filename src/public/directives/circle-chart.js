@@ -45,10 +45,10 @@ Author Razvan Ilin & John Hosie
         this.focus = data;
 
       },
-      draw: function (canvas,root,emit){
+      draw: function (canvas,data,emit){
         var self=this;
         
-        var nodes = this.pack.nodes(root),
+        var nodes = this.pack.nodes(data),
                 view;
         
         
@@ -116,10 +116,10 @@ Author Razvan Ilin & John Hosie
                 .enter().append("text")
                 .attr("class", "label")
                 .style("fill-opacity", function(d) {
-                    return d.parent === root ? 1 : 0;
+                    return d.parent === data ? 1 : 0;
                 })
                 .style("display", function(d) {
-                    return d.parent === root ? null : "none";
+                    return d.parent === data ? null : "none";
                 })
                 //.style("display", function(d) { if (d.attr('class')) })
                 .text(function(d) {
@@ -131,7 +131,7 @@ Author Razvan Ilin & John Hosie
             this.svg 
                 .style("background", self.color(-1))
                 .on("click", function() {
-                    zoom(root);
+                    zoom(data);
                 });
 
             zoomTo([this.focus.x, this.focus.y, this.focus.r * 2 ]);
